@@ -7,6 +7,9 @@ Resources:
 https://coligo.io/vuejs-the-basics/
 https://vuejs.org/v2/guide/#Handling-User-Input
 https://medium.freecodecamp.org/vue-js-introduction-for-people-who-know-just-enough-jquery-to-get-by-eab5aa193d77
+
+TODO:
+Add localStorage system for keeping todo items and retrieving 
 -->
 <!doctype html>
 <html lang="en">
