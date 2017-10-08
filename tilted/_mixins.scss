@@ -1,0 +1,31 @@
+@mixin tilted($angle, $color,$position: 'top', $pseudo: 'before') {
+  $height: get-tilted-height($angle);
+
+  position: relative;
+  background-color: $color;
+
+&::#{$pseudo} {
+    content: '';
+    padding-top: $height;
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    @if ($position == 'top') {
+      bottom: 100%;
+      background-image: linear-gradient($angle, $color 50%, transparent 50%);
+    } @else {
+      top: 100%;
+      background-image: linear-gradient($angle, transparent 50%, $color 50%);
+   }
+  &::before {
+    content: '';
+    padding-top: $height;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    background-image: linear-gradient($angle, $color 50%, transparent 50%);
+  }
+}
+}

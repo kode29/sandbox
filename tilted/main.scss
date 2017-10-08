@@ -1,0 +1,19 @@
+@import "variables";
+@import "functions";
+@import "mixins";
+body{
+	background-color: $body-background-color;
+}
+h1{
+	border-bottom: 3px double #669;
+}
+div{
+	background-color: $div-background-color;
+	width: $div-width;
+	padding: $div-padding;
+	font-family: Tahoma, Arial, sans-serif;
+  	@include tilted($angle: 3deg, $color: rgb(255, 255, 255));
+}
+*, ::before, ::after {
+  box-sizing: inherit;
+}
